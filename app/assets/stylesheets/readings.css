@@ -1,0 +1,42 @@
+.container{
+    width: 1180px;
+    margin: 0 auto;
+}
+.heading{
+    text-align: center;
+    font-family: Helvetica;
+}
+.divider{
+    background: #2E2F30;
+}
+table{
+    width: 100%;
+    font-family: Helvetica;
+}
+thead tr th {
+    background: #ffffff;
+    padding: 15px;
+    text-align: left;
+    text-transform: uppercase;
+}
+tbody tr td {
+    padding: 15px;
+    text-align: left;
+    background: #000;
+    color: #ffffff;
+
+
+}
+tfoot tr th{
+    padding: 10px 15px;
+    text-align: left;
+    background: #CCCCCC;
+    font-size: 14px;
+    color: #000000;
+
+}
+tfoot tr td{
+    text-align: left;
+    padding: 10px 15px;
+    font-size: 14px;
+}

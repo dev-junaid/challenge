@@ -1,0 +1,27 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: thermostats_development
+  host: localhost
+  port: 5432
+  username:  postgres
+  password:  postgres
+
+test:
+  <<: *default
+  database: thermostats_test
+  host: localhost
+  port: 5432
+  username:  postgres
+  password:  postgres
+
+production:
+  <<: *default
+  database: thermostats_production
+  username: thermostats
+  password: <%= ENV['IOT_THERMOSTATS_DATABASE_PASSWORD'] %>

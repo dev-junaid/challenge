@@ -1,0 +1,2 @@
+module ThermostatHelper
+end

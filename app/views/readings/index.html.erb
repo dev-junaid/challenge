@@ -1,0 +1,45 @@
+
+<div class="container">
+<h2 class="heading">CODING CHALLENGE</h2>
+  <table cellspacing="0" cellpadding="0">
+    <thead>
+      <tr>
+        <th style="text-align: left">Token</th>
+        <th colspan="3">Location</th>
+      </tr>
+    </thead>
+    <% @thermostat.each do |t| %>
+    <tbody>
+        <td ><%= t.household_token %></td>
+        <td colspan="3"><%= t.location %></td>
+      </tr>
+    </tbody>
+    <% if t.readers.present? %>
+       <tfoot>
+        <tr>
+          <th>Number</th>
+          <th>Temperature</th>
+          <th>Humidity</th>
+          <th>Battery Charge</th>
+        </tr>
+        <% t.readers.each do |r| %>
+          <tr>
+            <td><%= r.number %></td>
+            <td><%= r.temperature %></td>
+            <td><%= r.humidity %></td>
+            <td><%= r.battery_charge %></td>
+          </tr>
+        <% end %>
+       </tfoot>
+    <% else %>
+        <tfoot>
+        <tr>
+          <td>No Reading found.</td>
+        </tr>
+        </tfoot>
+    <% end %>
+    <% end %>
+  </table>
+
+
+</div>
